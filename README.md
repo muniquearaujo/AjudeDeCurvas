@@ -1,2 +1,2 @@
-# AjudeDeCurvas
-Métodos 2
+# AjusteDeCurvas
+Métodos Numéricos II
