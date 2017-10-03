@@ -1,0 +1,2 @@
+# AjudeDeCurvas
+Métodos 2
