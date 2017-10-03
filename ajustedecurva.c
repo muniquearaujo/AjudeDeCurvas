@@ -12,7 +12,7 @@ main()
 	
 	else
 	printf("\nPontos:\n");
-	{	//escrevendo os somatório dos mmq's
+	{	
 		for(i=1;i<n;i++)
 		{
 			fscanf(fp, "%f\t%f\n",&a[i],&b[i]); 
