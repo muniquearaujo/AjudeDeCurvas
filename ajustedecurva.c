@@ -36,5 +36,8 @@ main()
 	//calculandos os valores do ajuste linear
 	a1=(((n-1)*xy)-(x1*y1))/(((n-1)*xq)-(pow(x1,2)));
 	ao=((xq*y1)-(xy*x1))/(((n-1)*xq)-(pow(x1,2)));	
+	//imprimindo os valores do ajuste
+	printf("\nOs dados do ajuste linear são: a1= %.3f, ao=%.3f.\n\n ", a1, ao);	
+	fclose(fp);
 			
 }
