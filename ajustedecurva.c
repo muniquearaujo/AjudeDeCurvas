@@ -7,7 +7,7 @@ FILE *fp;
 main()
 {
 	int i;
-	float a[n], b[n],a1, ao, xy=0.0, x1=0.0, y1=0.0, xq=0.0;
+	float a[n], b[n],a1, ao, xy=0.0, x1=0.0, y1=0.0, xq=0.0, y[n];
 	if( (fp=fopen("dados.dat", "r"))==NULL)
 	printf("\n Arquivo vazio\n");
 	
@@ -38,6 +38,15 @@ main()
 	ao=((xq*y1)-(xy*x1))/(((n-1)*xq)-(pow(x1,2)));	
 	//imprimindo os valores do ajuste
 	printf("\nOs dados do ajuste linear são: a1= %.3f, ao=%.3f.\n\n ", a1, ao);	
+	
+	fp=fopen("dadoscomypreditos.dat", "w");
+	for(i=1;i<n;i++)
+	{
+		y[i]=((a1*a[i])+ao);
+		printf("%f\t%f\t%f\n",a[i],b[i], y[i]);
+		
+		fprintf(fp,"%f\t%f\t%f\n",a[i],b[i],y[i]);
+	}	
 	fclose(fp);
 			
 }
